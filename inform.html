@@ -2,67 +2,135 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Informasi - MCP</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informasi MCP</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <button class="btn btn-outline-primary me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+        ☰
+      </button>
+      <a class="navbar-brand fw-bold text-primary" href="#">MCP</a>
+    </div>
+  </nav>
+
   <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>MCP</h2>
-    <div class="quick-nav">
-</div>
-    <ul>
-      <li><a href="index.html">Dashboard</a></li>
-      <li><a href="inform.html"  class="active">Informasi</a></li>
-      <li><a href="about.html">Tentang</a></li>
-      <li><a href="alur.html">Alur Biogas</a></li>
-    </ul>
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">🏠 Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" href="inform.html">📊 Informasi</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">ℹ️ Tentang</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="alur.html">🔄 Alur Biogas</a></li>
+      </ul>
+    </div>
   </div>
-  
 
   <!-- Main Content -->
-  <div class="main">
-    <section class="mcp">
-    <img src="amrin.png" alt="Foto Area MCP" class="main-photo">
-    <p class="desc">MCP (Methane Capture Plant) adalah divisi yang berfungsi untuk menangkap gas metana (CH₄) 
-      yang dihasilkan dari proses penguraian limbah cair kelapa sawit (POME – Palm Oil Mill Effluent).
-      Kemudian gas metana ini dimanfaatkan sebagai sumber energi terbarukan untuk menghasilkan listrik melalui gas engine (Jenbacher dan Jinan)
-      Limbah cair dari pabrik kelapa sawit ini ditampung di kolam terbuka.
-      Tanpa pengolahan, POME akan terurai secara alami dan menghasilkan gas metana yang terlepas ke atmosfer — gas 
-      ini memiliki efek rumah kaca 25 kali lebih kuat dari CO₂.</p>
+  <main class="container-fluid" style="margin-top:70px;">
+    <div class="row">
 
-    <div class="photo-row">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
+      <!-- Sidebar (Desktop) -->
+      <div class="col-lg-2 d-none d-lg-block bg-dark text-white min-vh-100 p-3">
+        <h4 class="text-center mb-4">MCP</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">🏠 Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="inform.html">📊 Informasi</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">ℹ️ Tentang</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="alur.html">🔄 Alur Biogas</a></li>
+        </ul>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-10 p-4">
+        <h1 class="fw-bold text-primary mb-4">Informasi MCP</h1>
+
+        <!-- Section MCP Overview -->
+        <section class="mb-5">
+          <div class="card border-0 shadow-sm">
+            <img src="biogas.jpg" class="card-img-top" alt="Area MCP">
+            <div class="card-body">
+              <p class="card-text text-secondary">
+                <strong>MCP (Methane Capture Plant)</strong> berfungsi menangkap gas metana (CH₄) yang dihasilkan dari penguraian limbah cair kelapa sawit (POME – Palm Oil Mill Effluent). Gas metana ini kemudian dimanfaatkan sebagai sumber energi terbarukan untuk menghasilkan listrik melalui gas engine (Jenbacher dan Jinan).  
+                Tanpa pengolahan, POME akan terurai secara alami dan menghasilkan gas metana yang terlepas ke atmosfer — gas ini memiliki efek rumah kaca 25 kali lebih kuat dari CO₂.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery -->
+        <!-- <div class="row g-3 mb-5">
+          <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Foto MCP"></div>
+          <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Foto MCP"></div>
+          <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Foto MCP"></div>
+        </div> -->
+
+        <!-- Bioreaktor -->
+        <section id="bioreaktor" class="mb-5">
+          <h3 class="fw-bold text-primary mb-3">1. Stasiun Bioreaktor</h3>
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <p class="text-secondary">
+                Bioreaktor berfungsi sebagai tempat fermentasi utama dari POME untuk menghasilkan gas metana. Proses ini berlangsung dalam kondisi anaerob, di mana mikroorganisme menguraikan bahan organik menjadi CH₄ dan CO₂.
+              </p>
+              <!-- <div class="row g-3 mt-3">
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Bioreaktor"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Bioreaktor"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Bioreaktor"></div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Scrubber -->
+        <section id="scrubber" class="mb-5">
+          <h3 class="fw-bold text-primary mb-3">2. Stasiun Scrubber</h3>
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <p class="text-secondary">
+                Stasiun Scrubber berfungsi untuk memisahkan gas-gas pengotor dari biogas mentah, seperti CO₂ dan H₂S, agar menghasilkan gas metana dengan kemurnian tinggi yang siap dimanfaatkan.
+              </p>
+              <!-- <div class="row g-3 mt-3">
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Scrubber"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Scrubber"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Scrubber"></div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Engine Room -->
+        <section id="engine-room" class="mb-5">
+          <h3 class="fw-bold text-primary mb-3">3. Stasiun Engine Room</h3>
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <p class="text-secondary">
+                Engine Room adalah tempat di mana gas metana hasil pemurnian dibakar untuk menghasilkan tenaga listrik menggunakan gas engine (Jenbacher dan Jinan). Energi ini digunakan untuk kebutuhan operasional dan sebagian dapat disalurkan ke jaringan listrik.
+              </p>
+              <!-- <div class="row g-3 mt-3">
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Engine Room"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Engine Room"></div>
+                <div class="col-md-4"><img src="amrin.png" class="img-fluid rounded shadow-sm" alt="Engine Room"></div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+
+      </div>
     </div>
-  </section>
+  </main>
 
-  <section class="station">
-    <section id="bioreaktor" class="station">
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien..</p>
-
-    <div class="photo-row">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
-    </div>
-  </section>
-
-  <section id="scrubber" class="station">
-    <h2>2. Stasiun Scrubber</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.</p>
-    <div class="photo-row">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
-      <img src="amrin.png" alt="Amrin">
-    </div>
-  </section>
-
-  <section id="engine-room" class="station">
-    <h2>3. Stasiun Engine Room</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy. Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla. Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien.</p>
-  </section>
-  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
