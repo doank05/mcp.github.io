@@ -2,29 +2,94 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Scrubber - MCP</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang MCP</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="custom.css">
 </head>
 <body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <button class="btn btn-outline-primary me-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+        ☰
+      </button>
+      <a class="navbar-brand fw-bold text-primary" href="#">MCP</a>
+    </div>
+  </nav>
+
   <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>MCP</h2>
-    <ul>
-      <li><a href="index.html"  >Dashboard</a></li>
-      <li><a href="inform.html">Informasi</a></li>
-      <li><a href="about.html" class="active">Tentang</a></li>
-      <li><a href="alur.html">Alur Biogas</a></li>
-    </ul>
+  <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="sidebar">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">🏠 Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="inform.html">📊 Informasi</a></li>
+        <li class="nav-item"><a class="nav-link text-white active" href="about.html">ℹ️ Tentang</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="alur.html">🔄 Alur Biogas</a></li>
+      </ul>
+    </div>
   </div>
 
   <!-- Main Content -->
-  <div class="main">
-    <section class="station">
-    <section id="bioreaktor" class="station">
-    <h1>Tentang</h1>
-      <p>Website ini hanya menggunakan frontend | Backend dalam pembangunan</p>
+  <main class="container-fluid" style="margin-top:70px;">
+    <div class="row">
 
-    </section>
-  </div>
+      <!-- Sidebar (Desktop) -->
+      <div class="col-lg-2 d-none d-lg-block bg-dark text-white min-vh-100 p-3">
+        <h4 class="text-center mb-4">MCP</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">🏠 Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="inform.html">📊 Informasi</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="about.html">ℹ️ Tentang</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="alur.html">🔄 Alur Biogas</a></li>
+        </ul>
+      </div>
+
+      <!-- Content -->
+      <div class="col-lg-10 p-4">
+        <h1 class="fw-bold text-primary mb-4">Tentang MCP</h1>
+
+        <!-- Intro Card -->
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body">
+            <h5 class="fw-bold text-secondary">Tentang Website Ini</h5>
+            <p class="text-secondary mb-0">
+              Website ini merupakan <strong>frontend</strong> dari sistem pemantauan dan pengelolaan <strong>Methane Capture Plant (MCP)</strong>.  
+              Proyek ini sedang dalam tahap pengembangan dan adanya rencana pembangunan backend.  
+              Tujuan utama dari website ini adalah menyediakan tampilan awal dashboard, informasi proses, dan dokumentasi MCP secara interaktif dan mudah dipahami.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Status Pengembangan -->
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <h5 class="fw-bold text-secondary">Status Pengembangan</h5>
+            <p class="text-secondary">
+              Website ini masih dalam tahap pengembangan.  
+              Berikut rencana pengembangan selanjutnya:
+            </p>
+            <ul class="text-secondary">
+              <li>🔹 Integrasi database (backend CRUD).</li>
+              <li>🔹 Fitur analisis efisiensi energi & emisi karbon.</li>
+              <li>🔹 Modul laporan otomatis berbasis periode.</li>
+            </ul>
+            <p class="text-secondary mb-0">Versi saat ini: <strong>v1.0 (Frontend Only)</strong></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
